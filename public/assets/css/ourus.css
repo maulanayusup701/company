@@ -1,0 +1,158 @@
+.content h2 { margin-bottom: 22px; } /* override default 10px dari common.css */
+
+.content > p.lede {
+    line-height: 1.8;
+    color: var(--slate);
+    margin: 0 0 26px 0;
+    font-size: 14px;
+    max-width: 34rem;
+}
+
+.content p {
+    line-height: 1.8;
+    color: var(--slate);
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+/* ===== Profile grid (Profil Kami / Pendiri) ===== */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.profile-grid .img-wrap {
+    width: 100%;
+    max-width: 320px;
+}
+
+.profile-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/* ===== Values grid ===== */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(243, 241, 233, .15);
+    margin-top: 22px;
+}
+
+.value-card { background: var(--ledgerdark); padding: 24px 20px; }
+
+.value-card h3 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--paper);
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    color: rgba(243, 241, 233, .7);
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ===== Partner grid ===== */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 22px;
+}
+
+.partner-card img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.partner-card h4 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    color: var(--ink);
+    margin: 14px 0 4px 0;
+}
+
+.partner-card .role { font-size: 12.5px; color: var(--brass); font-weight: 500; }
+.partner-card p { font-size: 13px; margin-top: 8px; }
+
+/* ===== Visi & Misi ===== */
+.visi-misi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.visi-misi-grid h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    color: var(--brass);
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.visi-misi-grid h2::after { display: none; }
+
+.visi-misi-grid ul { list-style: none; padding: 0; margin: 0; }
+
+.visi-misi-grid ul li {
+    display: flex;
+    gap: 12px;
+    padding: 7px 0;
+    color: var(--slate);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.visi-misi-grid ul li::before { content: '—'; color: var(--brass); flex-shrink: 0; }
+
+/* ===== Why us grid ===== */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(243, 241, 233, .1);
+    margin-top: 22px;
+}
+
+.why-card { background: var(--ledgerdark); padding: 22px 20px; }
+
+.why-card h3 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--paper);
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: rgba(243, 241, 233, .7);
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ===== Responsive khusus Tentang ===== */
+@media (max-width: 720px) {
+    .profile-grid { grid-template-columns: 1fr; gap: 20px; }
+    .profile-grid .img-wrap { max-width: 100%; }
+    .profile-grid img { height: 220px; }
+
+    .values-grid,
+    .why-grid { grid-template-columns: 1fr; }
+
+    .partner-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .visi-misi-grid { grid-template-columns: 1fr; gap: 28px; }
+}

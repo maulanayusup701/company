@@ -1,0 +1,314 @@
+:root {
+    --ink: #1F2A24;
+    --paper: #F3F1E9;
+    --ledger: #2F5D50;
+    --ledgerdark: #20423A;
+    --brass: #B08628;
+    --slate: #5B6B63;
+}
+
+body {
+    background: #e9e6dd;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    margin: 0;
+}
+
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-top-group {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ===== HEADER ===== */
+.page-header {
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--paper);
+    border-bottom: 1px solid rgba(31, 42, 36, .15);
+}
+
+.logo-box {
+    width: 72px;
+    height: 72px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    background: #fff;
+}
+
+.logo-box i {
+    font-size: 26px;
+    color: var(--ledger);
+}
+
+.logo-box .dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1.5px solid var(--ink);
+    background: var(--brass);
+}
+
+.dot-1 { top: -5px; left: 50%; transform: translateX(-50%); }
+.dot-2 { right: -5px; top: 50%; transform: translateY(-50%); }
+.dot-3 { bottom: -5px; left: 50%; transform: translateX(-50%); }
+.dot-4 { left: -5px; top: 50%; transform: translateY(-50%); }
+
+.logo-label {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 4px;
+    color: var(--slate);
+}
+
+.company-name {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--brass);
+    letter-spacing: 1.2px;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.company-tag {
+    font-family: 'Source Serif 4', serif;
+    font-size: 13px;
+    color: var(--slate);
+    margin-top: 5px;
+    letter-spacing: .3px;
+}
+
+/* ===== NAV ===== */
+.main-nav {
+    display: flex;
+    background: var(--ink);
+}
+
+.main-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 13px 10px;
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13.5px;
+    transition: .2s;
+    border-right: 1px solid rgba(243, 241, 233, .1);
+}
+
+.main-nav a:last-child { border-right: none; }
+.main-nav a:hover { background: var(--ledgerdark); }
+.main-nav a.active { background: var(--brass); color: #fff; font-weight: 700; }
+
+/* ===== BODY LAYOUT ===== */
+.body-row {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+}
+
+/* ===== SIDEBAR (shell) ===== */
+.sidebar {
+    width: 220px;
+    padding: 24px 20px;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(31, 42, 36, .15);
+    position: sticky;
+    top: 180px;
+    height: fit-content;
+    align-self: flex-start;
+}
+
+/* dipakai di sidebar yang punya daftar bersirah (Tentang, Artikel) */
+.sidebar h6 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    font-size: 13.5px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(31, 42, 36, .2);
+}
+
+.sidebar ul {
+    margin: 0 0 18px 0;
+    padding-left: 18px;
+    font-size: 12.5px;
+    color: var(--slate);
+}
+
+.sidebar ul li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.sidebar a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 4px;
+    font-size: 13px;
+    transition: .2s;
+    border-radius: 4px;
+}
+
+.sidebar a:hover {
+    color: var(--brass);
+    background: rgba(176, 134, 40, .08);
+    padding-left: 10px;
+}
+
+.sidebar a i {
+    color: var(--ledger);
+    font-size: 15px;
+    width: 18px;
+}
+
+.sign-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(31, 42, 36, .15);
+}
+
+.sign-group a {
+    flex: 1;
+    text-align: center;
+    padding: 9px 6px;
+    background: var(--ledger);
+    color: var(--paper);
+    border-radius: 4px;
+    font-size: 12.5px;
+    font-weight: 600;
+    justify-content: center;
+    gap: 0;
+}
+
+.sign-group a:hover { background: var(--brass); color: #fff; padding-left: 6px; }
+
+.sign-group a.sign-up {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+}
+
+.sign-group a.sign-up:hover { background: var(--ink); color: var(--paper); }
+
+/* ===== CONTENT (shell) ===== */
+.content {
+    flex: 1;
+    padding: 36px 40px;
+    min-width: 0;
+}
+
+.content h2 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--ink);
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 1px solid currentColor;
+    position: relative;
+    margin-bottom: 10px; /* default ala Layanan/Artikel — Tentang override ke 22px */
+}
+
+.content h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 48px;
+    height: 1px;
+    background: currentColor;
+}
+
+.content strong { color: var(--ink); }
+
+.content-section {
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(31, 42, 36, .08);
+}
+
+.content-section:last-child { border-bottom: none; }
+
+.section-dark {
+    background: var(--ledgerdark);
+    color: var(--paper);
+    margin: 0 -40px;
+    padding: 36px 40px;
+}
+
+.section-dark h2 { color: var(--paper); }
+.section-dark p { color: rgba(243, 241, 233, .75); }
+
+/* ===== FOOTER ===== */
+.page-footer {
+    padding: 14px 32px;
+    text-align: right;
+    font-size: 12.5px;
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.page-footer strong { color: var(--brass); }
+
+/* ===== RESPONSIVE (umum) ===== */
+@media (max-width: 900px) {
+    .page-header { padding: 14px 20px; }
+    .content { padding: 28px 20px; }
+    .section-dark { margin: 0 -20px; padding: 28px 20px; }
+    .sidebar { width: 200px; padding: 20px 16px; top: 160px; }
+    .company-name { font-size: 20px; letter-spacing: .5px; }
+    .company-tag { font-size: 12px; }
+}
+
+@media (max-width: 720px) {
+    .body-row { flex-direction: column; }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid rgba(31, 42, 36, .15);
+    }
+
+    .company-name { font-size: 16px; }
+    .company-tag { font-size: 11.5px; }
+    .logo-box { width: 56px; height: 56px; }
+    .logo-box i { font-size: 20px; }
+    .logo-box .dot { width: 10px; height: 10px; }
+
+    .main-nav { flex-wrap: wrap; }
+
+    .main-nav a {
+        flex: 1 0 33.33%;
+        font-size: 12px;
+        padding: 10px 6px;
+        border-bottom: 1px solid rgba(243, 241, 233, .1);
+    }
+
+    .page-footer { text-align: center; }
+}

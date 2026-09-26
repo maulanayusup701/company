@@ -1,0 +1,134 @@
+.auth-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 40px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 380px;
+    background: #fff;
+    border: 1px solid rgba(31, 42, 36, .12);
+    border-radius: 12px;
+    padding: 36px 32px;
+    box-shadow: 0 10px 30px rgba(31, 42, 36, .06);
+}
+
+.auth-card h2 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 6px 0;
+}
+
+.auth-card .sub {
+    font-size: 13px;
+    color: var(--slate);
+    margin: 0 0 26px 0;
+}
+
+.form-label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.form-control {
+    border: 1px solid rgba(31, 42, 36, .18);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13.5px;
+}
+
+.form-control:focus {
+    border-color: var(--brass);
+    box-shadow: 0 0 0 3px rgba(176, 134, 40, .12);
+}
+
+.password-field { position: relative; }
+
+.password-field .toggle-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--slate);
+    cursor: pointer;
+    font-size: 14px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.form-check-label { font-size: 12.5px; color: var(--slate); }
+
+.form-check-input:checked {
+    background-color: var(--ledger);
+    border-color: var(--ledger);
+}
+
+.link-brass { color: var(--brass); text-decoration: none; font-weight: 600; }
+.link-brass:hover { text-decoration: underline; }
+
+.btn-login {
+    background: var(--ledger);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px;
+    border-radius: 6px;
+    width: 100%;
+    transition: .2s;
+}
+
+.btn-login:hover { background: var(--brass); color: #fff; }
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    color: var(--slate);
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(31, 42, 36, .12);
+}
+
+.btn-google {
+    width: 100%;
+    border: 1px solid rgba(31, 42, 36, .18);
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: .2s;
+}
+
+.btn-google:hover { background: rgba(31, 42, 36, .04); }
+
+.signup-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--slate);
+    margin-top: 24px;
+}
+
+/* ===== Responsive khusus Login ===== */
+@media (max-width: 720px) {
+    .auth-card { padding: 28px 22px; }
+}

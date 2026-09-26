@@ -1,0 +1,119 @@
+.content > p.lede {
+    line-height: 1.8;
+    color: var(--slate);
+    margin: 0 0 26px 0;
+    font-size: 14px;
+    max-width: 34rem;
+}
+
+/* ===== Grid: info kontak + form ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ---- Kolom info ---- */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.info-item {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(31, 42, 36, .08);
+}
+
+.info-item:first-child { padding-top: 0; }
+
+.info-item .icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(47, 93, 80, .1);
+    color: var(--ledger);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.info-item h4 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 4px 0;
+}
+
+.info-item p {
+    font-size: 13px;
+    color: var(--slate);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.social-row {
+    display: flex;
+    gap: 10px;
+}
+
+.social-row a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--ledgerdark);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.social-row a:hover { background: var(--brass); }
+
+/* ---- Kolom form ---- */
+.contact-form textarea.form-control {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.btn-send {
+    background: var(--ledger);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 28px;
+    border-radius: 6px;
+    transition: .2s;
+}
+
+.btn-send:hover { background: var(--brass); color: #fff; }
+
+/* ===== Lokasi / Map ===== */
+.map-wrap {
+    margin-top: 22px;
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.map-wrap iframe {
+    width: 100%;
+    height: 280px;
+    border: 0;
+    display: block;
+}
+
+/* ===== Responsive khusus Kontak ===== */
+@media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+}
