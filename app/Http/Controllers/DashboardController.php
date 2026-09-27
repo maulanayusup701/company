@@ -22,16 +22,29 @@ class DashboardController extends Controller
 
     public function article()
     {
-        return view('front-end.article');
+        return view('front-end.article', [
+            'title' => 'Article'
+        ]);
     }
 
     public function contact()
     {
-        return view('front-end.contact');
+        return view('front-end.contact', [
+            'title' => 'Contact'
+        ]);
     }
 
     public function ourus()
     {
-        return view('front-end.ourus');
+        return view('front-end.ourus', [
+            'title' => 'Our Us'
+        ]);
+    }
+
+    public function gallery()
+    {
+        return view('front-end.gallery', [
+            'title' => 'Gallery'
+        ]);
     }
 }

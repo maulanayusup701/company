@@ -19,7 +19,7 @@
 
     <nav class="main-nav">
         <a href="{{ route('landingpage') }}" class="{{ request()->routeIs('landingpage') ? 'active' : '' }}">Home</a>
-        <a href="{{ route('service.index') }}" class="{{ request()->routeIs('service.*') ? 'active' : '' }}">service</a>
+        <a href="{{ route('service.index') }}" class="{{ request()->routeIs('service.*') ? 'active' : '' }}">Service</a>
         <a href="{{ route('article.index') }}" class="{{ request()->routeIs('article.*') ? 'active' : '' }}">Artikel</a>
         <a href="{{ route('contact.index') }}" class="{{ request()->routeIs('contact.*') ? 'active' : '' }}">Kontak</a>
         <a href="{{ route('ourus.index') }}" class="{{ request()->routeIs('ourus.*') ? 'active' : '' }}">Tentang
